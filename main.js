@@ -118,8 +118,8 @@ var SLN = timSLN(20,30,40);
 console.log("Số lớn nhất là: " + SLN);
 
 
-var max = num_1;
-num_2 > max;
-max = num_2;
-num_3 > max;
-max = num_3;
+// var max = num_1;
+// num_2 > max;
+// max = num_2;
+// num_3 > max;
+// max = num_3;
