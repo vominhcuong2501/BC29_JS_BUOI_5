@@ -96,9 +96,37 @@
                   <label for="">Số người phụ thuộc</label>
                   <input type="text" class="form-control" id="soNguoiPhuThuoc" />
                 </div>
-                <button class="btn btn-danger" id="tinhtien" onclick="TinhTienThue()">Tính tiền</button>
+                <button class="btn btn-danger" id="tinhtien" onclick="TinhTienThue();">Tính tiền</button>
               </div>
               <div id="thongbao3" class="card-footer text-muted"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="container">
+        <h1 class="text-success">Bài Tập 4</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">Tính tiền cáp</div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label >Nhập mã khách hàng</label>
+                  <input type="text" class="form-control" id="maKH" />
+                  <label >Chọn loại khách hàng</label><br>
+                  <input type="radio" id="doanhnghiep" name="loaiKH" class="ml-3" onclick="loaiKH()"/> Doanh Nghiệp <br>
+                  <input type="radio" id="nhadan" name="loaiKH" class="ml-3" onclick="loaiKH()"/> Nhà dân <br>
+                  <label >Số kết nối</label>
+                  <input type="text" class="form-control" id="soketnoi" />
+                  <label >Số kênh cao cấp</label>
+                  <input type="text" class="form-control" id="sokenh" />
+                </div>
+                <button class="btn btn-danger" id="tinhtien" onclick="TinhTienCap();">Tiền cáp</button>
+              </div>
+              <div id="thongbao4" class="card-footer text-muted"></div>
             </div>
           </div>
         </div>

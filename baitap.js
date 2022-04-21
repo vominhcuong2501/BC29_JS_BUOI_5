@@ -165,3 +165,71 @@ function TinhTienThue() {
      document.getElementById("thongbao3").style.background = "aqua";
 }
 
+/**
+ * Bài tập 4
+ * - Đầu vào
+ *      Nhập mã khách hàng: maKH
+ *      Chọn loại KH: doanhnghiep/nhadan
+ *      Nhập số kết nối: soketnoi
+ *      Nhập số kênh cao cấp: sokenh
+ * - xử lý
+ *      Nếu chọn nhà dân thì ô số kết nối bị ẩn không thể nhập 
+ *          Phí xử lý hóa đơn: 4.5$
+ *          Phí dịch vụ cơ bản: 20.5$
+ *          Thuê kênh cao cấp: 7.5$/kênh
+ *      Nếu chọn doanh nghiệp thì được nhâp ô kết nối
+ *          Phí xử lý hóa đơn: 15$
+ *          Phí dịch vụ cơ bản: 75$ cho 10 cái kết nối, thêm mỗi cái 5$
+ *          Thuê kênh cao cấp: 50$/kênh
+ * - Đầu ra
+ *      tính tiền
+ */
+document.getElementById("nhadan").onclick = function() {
+        document.getElementById("soketnoi").disabled = true;
+ }
+document.getElementById("doanhnghiep").onclick = function() {
+    document.getElementById("soketnoi").disabled = false;
+}
+function loaiKH() {
+    var doanhNghiep = document.getElementById("doanhnghiep").checked ;
+    var nhaDan = document.getElementById("nhadan").checked;
+    var ketqua;
+    if(doanhNghiep) {
+        ketqua = "doanhnghiep";
+    } else if(nhaDan) {
+        ketqua = "nhadan";
+    }
+    return ketqua;
+}
+
+function TinhTienCap() {
+    // nhà dân
+    var phiXuLy1 = 4.5;
+    var phiDichVu1 = 20.5;
+    var phiKenh1 = 7.5;
+    // doanh nghiệp
+    var phiXuLy2 = 15;
+    var phiDichVu2 = 75;
+    var phiKenh2 = 50;
+    var phiThemKetnoi = 5;
+    // thông tin nhập
+    var maKH = document.getElementById("maKH").value;
+    var soKetNoi = document.getElementById("soketnoi").value*1;
+    var soKenh = document.getElementById("sokenh").value*1;
+    var LoaiKH = loaiKH();
+    var result = 0;
+    switch(LoaiKH) {
+        case 'doanhnghiep':
+            if(soKetNoi > 10) {
+                result = phiDichVu2 + phiKenh2*soKenh + phiXuLy2 +(soKetNoi-10)*phiThemKetnoi;
+            } else {
+                result = phiDichVu2 + phiKenh2*soKenh + phiXuLy2;
+            }
+        break;
+        case 'nhadan':
+            result = phiDichVu1 + phiKenh1*soKenh + phiXuLy1;
+        break;
+    }
+    document.getElementById("thongbao4").innerHTML ="Mã khách hàng: "+ maKH + " .Số tiền cáp phải trả là "+ result + "$";
+     document.getElementById("thongbao4").style.background = "aqua";
+}
