@@ -20,7 +20,7 @@
 
 		<div class="contact100-more">
 			<i class="zmdi zmdi-phone-in-talk"></i>
-			(+84) 961.05.10.14
+			(+84) 939 383 480
 		</div>
 
 		<div class="wrap-contact100">
@@ -38,19 +38,22 @@
 				<h2>Vui lòng chọn loại xe:</h2>
 				<ul>
 					<li class="type">
-						<input type="radio" name="selector" id="grabCar" onclick="loaiXe();">
-						<label for="grabCar">Grab Car</label>
+						<!-- <input type="radio" name="selector" id="grabCar" onclick="loaiXe();"> -->
+						<input type="radio" name="selector" id="grabX">
+						<label for="grabX">Grab Car</label>
 						<div class="check"></div>
 					</li>
 
 					<li class="type">
-						<input type="radio" name="selector" id="grabSUV" onclick="loaiXe();">
+						<!-- <input type="radio" name="selector" id="grabSUV" onclick="loaiXe();"> -->
+						<input type="radio" name="selector" id="grabSUV" >
 						<label for="grabSUV">Grab SUV</label>
 						<div class="check"></div>
 					</li>
 
 					<li class="type">
-						<input type="radio" name="selector" id="grabBlack" onclick="loaiXe();">
+						<!-- <input type="radio" name="selector" id="grabBlack" onclick="loaiXe();"> -->
+						<input type="radio" name="selector" id="grabBlack">
 						<label for="grabBlack">Grab Black</label>
 						<div class="check"></div>
 					</li>
@@ -75,13 +78,14 @@
 
 				<div class="wrap-contact100-form-btn">
 					<div class="contact100-form-bgbtn"></div>
-					<button type="button" class="contact100-form-btn" onclick="TinhTien()">
-						TÍNH TIỀN
+					<!-- <button type="button" class="contact100-form-btn" onclick="TinhTien()"> -->
+					<button type="button" class="contact100-form-btn" id="btnTinhTien">						TÍNH TIỀN
 					</button>
 				</div>
 				<div class="wrap-contact100-form-btn">
 					<div class="contact100-form-bgbtn"></div>
-					<button type="button" class="contact100-form-btn" data-toggle="modal" data-target="#exampleModal">
+					<button id="inHoaDon"
+					type="button" class="contact100-form-btn" data-toggle="modal" data-target="#myModal">
 						IN HÓA ĐƠN
 					</button>
 				</div>
@@ -97,6 +101,50 @@
 		</div>
 	</div>
 
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+	HÓA ĐƠN
+  </button>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+  
+		<!-- Modal Header -->
+		<div class="modal-header">
+		  <h4 class="modal-title">In hóa đơn</h4>
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		</div>
+  
+		<!-- Modal body -->
+		<div class="modal-body">
+		  <table class="table">
+			  <thead>
+				  <tr>
+					  <td>CHI TIẾT</td>
+					  <td>SỬ DỤNG</td>
+					  <td>ĐƠN GIÁ (1.000đ)</td>
+					  <td>THÀNH TIỀN (1.000đ)</td>
+				  </tr>
+			  </thead>
+			  <tbody>
+				<tr>
+					<td>KM ĐẦU TIÊN</td>
+					<td></td>
+				</tr>
+			  </tbody>
+		  </table>
+		</div>
+  
+		<!-- Modal footer -->
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		</div>
+  
+	  </div>
+	</div>
+  </div>
 
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -104,8 +152,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="./js/map-custom.js"></script>
 	<script type="text/javascript" src="./js/main.js"></script>
-
-
 
 </body>
 

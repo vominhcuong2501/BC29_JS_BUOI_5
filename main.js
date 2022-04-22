@@ -99,6 +99,11 @@ document.getElementById("kiemTra").onclick = function() {
  + Xử lý
     Viết hàm tìm số lớn nhất
     Truyền vô 3 tham số a,b,c
+        var max = num_1;
+        num_2 > max;
+            max = num_2;
+        num_3 > max;
+            max = num_3;
     Trả về SLN
  + Đầu ra
     show kết quả
@@ -118,8 +123,3 @@ var SLN = timSLN(20,30,40);
 console.log("Số lớn nhất là: " + SLN);
 
 
-// var max = num_1;
-// num_2 > max;
-// max = num_2;
-// num_3 > max;
-// max = num_3;
