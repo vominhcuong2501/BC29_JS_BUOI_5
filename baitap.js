@@ -154,7 +154,7 @@ function TinhTienThue() {
         ketqua =  60*(5/100) + 60*(10/100) + 90*(15/100) + 174*(20/100) + (thuNhapChiuThue-384)*(25/100);  
     } else if(thuNhapChiuThue > 624 && thuNhapChiuThue <= 960) {
         ketqua =  60*(5/100) + 60*(10/100) + 90*(15/100) + 174*(20/100) + 336*(25/100) + (thuNhapChiuThue-624)*(30/100); 
-    } else if(thuNhapChiuThue < 960) {
+    } else if(thuNhapChiuThue > 960) {
         ketqua =  60*(5/100) + 60*(10/100) + 90*(15/100) + 174*(20/100) + 336*(25/100) + 240*(30/100)+ (thuNhapChiuThue-960)*(35/100); 
     } 
     // Quy đổi VND
