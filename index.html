@@ -8,6 +8,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+      label {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -34,21 +41,32 @@
         <div class="row">
           <div class="col-md-6">
             <div class="card">
-              <div class="card-header">Kiểm tra điểm và xét đậu rớt</div>
+              <div class="card-header bg-primary">Kiểm tra điểm và xét đậu rớt</div>
               <div class="card-body">
                 <div class="form-group">
-                  <label for="">Nhập điểm chuẩn</label>
+                  <label >Nhập điểm chuẩn</label>
                   <input type="text" class="form-control" id="diemChuan" />
-                  <label for="">Nhập điểm môn 1</label>
+                  <label >Nhập điểm môn 1</label>
                   <input type="text" class="form-control" id="diemMon1" />
-                  <label for="">Nhập điểm môn 2</label>
+                  <label >Nhập điểm môn 2</label>
                   <input type="text" class="form-control" id="diemMon2" />
-                  <label for="">Nhập điểm môn 3</label>
+                  <label >Nhập điểm môn 3</label>
                   <input type="text" class="form-control" id="diemMon3" />
-                  <label for="">Nhập mã vùng</label>
-                  <input type="text" class="form-control" id="maVung" />
-                  <label for="">Nhập mã đối tượng</label>
-                  <input type="text" class="form-control" id="maDoiTuong" />
+                  <div class="form-field">
+                    <label >Chọn mã vùng</label><br>
+                    <input type="radio" id="a" name="maVung"> A (+ 2 điểm)<br>
+                    <input type="radio" id="b" name="maVung"> B (+ 1 điểm)<br>
+                    <input type="radio" id="c" name="maVung"> C (+ 0.5 điểm)<br>
+                    <input type="radio" id="X" name="maVung"> X (Không thuộc vùng được cộng điểm)
+                  </div>
+                  <br>
+                  <div class="form-field">
+                    <label >Chọn mã đối tượng</label><br>
+                    <input type="radio" id="1" name="maDoiTuong"> Mã 1 (+ 2.5 điểm)<br>
+                    <input type="radio" id="2" name="maDoiTuong"> Mã 2 (+ 1 điểm)<br>
+                    <input type="radio" id="3c" name="maDoiTuong"> Mã 3 (+ 0.5 điểm)<br>
+                    <input type="radio" id="0" name="maDoiTuong"> Mã 0 (Không có mã đối tượng được cộng điểm)
+                  </div>
                 </div>
                 <button class="btn btn-danger" id="kiemtra" onclick="TinhDiem()">Kiểm tra</button>
               </div>

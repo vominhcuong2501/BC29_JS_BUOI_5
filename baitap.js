@@ -15,15 +15,18 @@
 
 function loaiVung() {
     // xét loại mã vùng
-    var maVung = (document.getElementById("maVung").value);
+    var A = document.getElementById("a");
+    var B = document.getElementById("b");
+    var C = document.getElementById("c");
+    var X = document.getElementById("x");
     var ketqua;
-    if(maVung === "A") {
+    if(A.checked) {
         ketqua = 2;
-    } else if(maVung === "B") {
+    } else if(B.checked) {
         ketqua = 1;
-    } else if(maVung === "C") {
+    } else if(C.checked) {
         ketqua = 0.5;
-    } else if(maVung === "X") {
+    } else if(X.checked) {
         ketqua = 0;
     } else {
         ketqua = 0;
@@ -32,19 +35,22 @@ function loaiVung() {
 }
 function loaiDoiTuong() {
     // xét loại đối tượng
-    var maDoiTuong = document.getElementById("maDoiTuong").value*1;
+    var number_1 = document.getElementById("1");
+    var number_2 = document.getElementById("2");
+    var number_3 = document.getElementById("3");
+    var number_0 = document.getElementById("0");
     var ketqua;
-     if(maDoiTuong === 1) {
-         ketqua = 2.5;
-     } else if (maDoiTuong === 2) {
-         ketqua = 1;
-     } else if(maDoiTuong === 3) {
-         ketqua = 0.5;
-     } else if(maDoiTuong === 0) {
-         ketqua = 0;
-     } else {
-         ketqua = 0;
-     }
+    if(number_1.checked) {
+        ketqua = 2.5;
+    } else if(number_2.checked) {
+        ketqua = 1;
+    } else if(number_3.checked) {
+        ketqua = 0.5;
+    } else if(number_0.checked) {
+        ketqua = 0;
+    } else {
+        ketqua = 0;
+    }
      return ketqua;
  }
 function TinhDiem() {
